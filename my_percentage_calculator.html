@@ -3,7 +3,12 @@
 <head>
 	<title>Percentage Calculator</title>
 	<style>
-		div {
+		#cal {
+			margin-top: 750px;
+			margin-left: 450px;
+			transform: scale(3.5, 3);
+		}
+		#cal div {
 			background-color: #99b3ff;
 			margin: auto auto 40px auto;
 			width: 330px;
@@ -25,22 +30,31 @@
 			margin-top: 20px;
 			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 		}
+		@media only screen and (min-width: 1000px) {
+			#cal {
+				transform: scale(1, 1);
+				margin-top: 0;
+				margin-left: 0;
+			}
+		}
 	</style>
 </head>
 <body>
-	<center><h1 style="margin-bottom: 40px;">Binky's Percentage<br> Calculator</h1></center>
-	<div>
-		What is <input type="text" id="1a"> % of <input type="text" id="1b"> ?<br>
-		<button type="button" onclick="one()">Calculate</button> <input type="text" id=1c readonly>
-	</div>
-	<div>
-		<input type="text" id="2a"> is what percent of <input type="text" id="2b">?<br>
-		<button type="button" onclick="two()">Calculate</button> <input type="text" id="2c" readonly> %
-	</div>
-	<div>
-		What is the percentage increase/decrease<br>
-		from <input type="text" id="3a"> to <input type="text" id="3b"> ?<br>
-		<button type="button" onclick="three()">Calculate</button> <input type="text" id="3c" readonly> %
+	<div id="cal">
+		<center><h1 style="margin-bottom: 40px;">Binky's Percentage<br> Calculator</h1></center>
+		<div>
+			What is <input type="text" id="1a"> % of <input type="text" id="1b"> ?<br>
+			<button type="button" onclick="one()">Calculate</button> <input type="text" id=1c readonly>
+		</div>
+		<div>
+			<input type="text" id="2a"> is what percent of <input type="text" id="2b">?<br>
+			<button type="button" onclick="two()">Calculate</button> <input type="text" id="2c" readonly> %
+		</div>
+		<div>
+			What is the percentage increase/decrease<br>
+			from <input type="text" id="3a"> to <input type="text" id="3b"> ?<br>
+			<button type="button" onclick="three()">Calculate</button> <input type="text" id="3c" readonly> %
+		</div>
 	</div>
 
 
